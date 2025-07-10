@@ -2247,9 +2247,11 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #fbf8f1;
-				background-image: url("../../images/hound.jpg");
+				/* background-color: #fbf8f1; */
+				/* background-image: url("../../images/hound.jpg"); */
 				background-position: 0px 625px;
+				position: relative;  /* Make sure the section can contain the absolutely positioned video */
+				overflow: hidden;    /* Prevent video overflow */
 			}
 
 			#main > section.two {
@@ -2632,3 +2634,12 @@ input, select, textarea {
 				}
 
 	}
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
